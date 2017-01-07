@@ -1,0 +1,881 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="VPS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="参考:https://ttt.tt/104/https://mozillazg.com/2013/01/linux-vps-first-things-need-to-do.html
+
+常用命令
+
+
+rm [-r] 文件/文件夹 移除文件[夹]
+sudo 暂时使用最高权限
+sudo su 使用最高权限
+[sudo] su [-l] 用户名 切换用户
+CTRL + C 按键 中断当前操作
+ssh [-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS(CentOS)入手后配置事项(mac客户端)">
+<meta property="og:url" content="https://tanpengsccd.github.io/2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/index.html">
+<meta property="og:site_name" content="tanpengcd'blog">
+<meta property="og:description" content="参考:https://ttt.tt/104/https://mozillazg.com/2013/01/linux-vps-first-things-need-to-do.html
+
+常用命令
+
+
+rm [-r] 文件/文件夹 移除文件[夹]
+sudo 暂时使用最高权限
+sudo su 使用最高权限
+[sudo] su [-l] 用户名 切换用户
+CTRL + C 按键 中断当前操作
+ssh [-">
+<meta property="og:updated_time" content="2017-01-07T09:57:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VPS(CentOS)入手后配置事项(mac客户端)">
+<meta name="twitter:description" content="参考:https://ttt.tt/104/https://mozillazg.com/2013/01/linux-vps-first-things-need-to-do.html
+
+常用命令
+
+
+rm [-r] 文件/文件夹 移除文件[夹]
+sudo 暂时使用最高权限
+sudo su 使用最高权限
+[sudo] su [-l] 用户名 切换用户
+CTRL + C 按键 中断当前操作
+ssh [-">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":1},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tanpengsccd.github.io/2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/"/>
+
+
+
+
+
+  <title> VPS(CentOS)入手后配置事项(mac客户端) | tanpengcd'blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">tanpengcd'blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">tanpengsccd的小窝</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="tanpengsccd">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="tanpengcd'blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="tanpengcd'blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                VPS(CentOS)入手后配置事项(mac客户端)
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-09T17:44:15+08:00">
+                2016-10-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-01-07T17:57:17+08:00">
+                2017-01-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VPS总结笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">VPS总结笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>参考:<br><a href="https://ttt.tt/104/" target="_blank" rel="external">https://ttt.tt/104/</a><br><a href="https://mozillazg.com/2013/01/linux-vps-first-things-need-to-do.html" target="_blank" rel="external">https://mozillazg.com/2013/01/linux-vps-first-things-need-to-do.html</a></p>
+<blockquote>
+<p>常用命令</p>
+</blockquote>
+<ol>
+<li>rm [-r] 文件/文件夹<br> 移除文件[夹]</li>
+<li>sudo<br> 暂时使用最高权限</li>
+<li>sudo su<br> 使用最高权限</li>
+<li>[sudo] su [-l] 用户名<br> 切换用户</li>
+<li>CTRL + C 按键<br> 中断当前操作</li>
+<li><p>ssh [-l用户名] [-p端口] 用户名（常用root）@ip（如192.168.1.1）</p>
+</li>
+<li><p>top</p>
+</li>
+<li><p>ps  -ef</p>
+</li>
+</ol>
+<h1 id="简单配置环境（方便后续操作，可以不做）"><a href="#简单配置环境（方便后续操作，可以不做）" class="headerlink" title="简单配置环境（方便后续操作，可以不做）"></a>简单配置环境（方便后续操作，可以不做）</h1><ol>
+<li><p>安装 git  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install git</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装 zsh</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install zsh</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装 oh my zsh<br> 如果登陆其它账户没有高亮语法可再次运行以下命令  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="ssh安全设置"><a href="#ssh安全设置" class="headerlink" title="ssh安全设置"></a>ssh安全设置</h1><ol>
+<li><p>修改root密码  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure>
+</li>
+<li><p>新建用户  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd 用户名</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改新用户密码  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd  用户名</div></pre></td></tr></table></figure>
+</li>
+<li><p>授予新用户权限</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo -e &quot;\n用户名 ALL=(ALL) ALL\n&quot; &gt;&gt; /etc/sudoers</div><div class="line">tail -3 /etc/sudoers</div></pre></td></tr></table></figure>
+<p> 也可以 <code>visudo</code> 自己末行自己添加 <code>用户名 ALL=(ALL) ALL</code> 到末行</p>
+</li>
+<li><p>配置ssh-keygen 登陆（不用输入密码登录VPS）<br> 客户端本地运行（非VPS）<br> <code>ssh-keygen</code> 一路回车获得一对公私钥<br>  <code>cat  /Users/‘whoami’/.ssh/id_rsa.pub</code> 这就是你的公钥<br>   <code>cat  /Users/‘whoami’/.ssh/id_rsa</code> 这就是你的私钥<br> <code>ssh-copy-id -i ~/.ssh/id_rsa.pub username@198.51.100.100</code>或者<code>scp  [-P 非默认端口] /Users/    `whoami`/.ssh/id_rsa.pub username@IP地址:~/.ssh/authorized_keys</code><br> 将客户端的公钥复制到VPS上</p>
+<blockquote>
+<p>简单说一下原理，可以不看,VPS为了验证你是合法的登陆者（客户端）,在你ssh登陆VPS时，VPS会发来一段字符串，你用生成的私    钥加密这串字符串生成密文，又发回给VPS，VPS用你上传的公钥解密密文，如果解密得到字符串和发出字符串一致则验证通过。这样就    可以保证发送的信息即使暴露，只要公私钥安全就可以保证验证的安全性</p>
+</blockquote>
+</li>
+<li><p>修改ssh的配置文件<br> <code>vi /etc/ssh/sshd_config</code></p>
+<blockquote>
+<p>每行前的 “#”表示这行配置被注释了，不生效,需要的配置去掉“#”才可生效</p>
+</blockquote>
+<p> PermitRootLogin yes 改为 PermitRootLogin no ，不允许root账户登录 建议设置为no更安全<br> PasswordAuthentication yes 改为 PasswordAuthentication no。允许密码登录，如果设置为NO，就只能通过ssh公私钥登录了<br> Port 22 改为 Port 端口号数字(比如： Port 7564)。默认为22建议自己修改其他端口</p>
+</li>
+<li>重启ssh服务<br> <code>sudo service sshd restart</code></li>
+</ol>
+<h1 id="端口安全设置"><a href="#端口安全设置" class="headerlink" title="端口安全设置"></a>端口安全设置</h1><h2 id="iptables配置"><a href="#iptables配置" class="headerlink" title="iptables配置"></a>iptables配置</h2><blockquote>
+<p>关闭多余端口防止一些DDoS攻击<br>iptables一般系统已经集成</p>
+</blockquote>
+<ol>
+<li><p>清楚默认规则  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -F</div></pre></td></tr></table></figure>
+</li>
+<li><p>允许ssh 默认22端口 进入和返回  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -p tcp --dport 30501 -j ACCEPT  </div><div class="line">iptables -A OUTPUT -p tcp --sport 30501 -m state --state ESTABLISHED -j ACCEPT</div></pre></td></tr></table></figure>
+</li>
+<li><p>允许 53 端口，一般作为 DNS 服务使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iptables -A OUTPUT -p udp --dport 53 -j ACCEPT</div><div class="line">iptables -A INPUT -p udp --sport 53 -j ACCEPT</div></pre></td></tr></table></figure>
+</li>
+<li><p>允许本机访问本机</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT</div><div class="line">iptables -A OUTPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT</div></pre></td></tr></table></figure>
+</li>
+<li><p>允许所有 IP 访问 80 和 443 端口，一般作为 http 和 https 用途  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -p tcp -s 0/0 --dport 80 -j ACCEPT</div><div class="line">iptables -A OUTPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT</div><div class="line">iptables -A INPUT -p tcp -s 0/0 --dport 443 -j ACCEPT</div><div class="line">iptables -A OUTPUT -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT</div></pre></td></tr></table></figure>
+</li>
+<li><p>保存配置  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">service iptables save </div><div class="line">or </div><div class="line">iptables-save &gt; /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
+</li>
+<li><p>开机自启动 iptables </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig iptables on</div></pre></td></tr></table></figure>
+</li>
+<li><p>服务重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置<br> [-n]代表新增</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -L [-n]</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>&gt; 具体使用iptables 详解 看一看这里http://blog.csdn.net/reyleon/article/details/12976341
+</code></pre><h2 id="防扫描（fail2ban）"><a href="#防扫描（fail2ban）" class="headerlink" title="防扫描（fail2ban）"></a>防扫描（fail2ban）</h2><ol>
+<li><p>安装EPLE源</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install epel-release.noarch</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装 fail2ban</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install fail2ban.noarch</div></pre></td></tr></table></figure>
+<p> 安装时会自动加入自启</p>
+</li>
+<li><p>拷贝默认配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local</div></pre></td></tr></table></figure>
+<p>通过查看 /var/log/fail2ban.log 文件即可知道有哪些精力过剩的家伙在整天扫描你的 SSH 了。</p>
+<blockquote>
+<p>fail2ban github主页 <a href="https://github.com/fail2ban/fail2ban" target="_blank" rel="external">https://github.com/fail2ban/fail2ban</a><br>了解更多  <a href="http://www.voidcn.com/blog/cmdschool/article/p-5575852.html" target="_blank" rel="external">http://www.voidcn.com/blog/cmdschool/article/p-5575852.html</a></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="配置SS-R-服务器端"><a href="#配置SS-R-服务器端" class="headerlink" title="配置SS(R)服务器端"></a>配置SS(R)服务器端</h1><blockquote>
+<p>具体看这里 <a href="https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup" target="_blank" rel="external">shadowsocks-rss</a></p>
+</blockquote>
+<h1 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h1><h2 id="单边加速"><a href="#单边加速" class="headerlink" title="单边加速"></a>单边加速</h2><h3 id="锐速"><a href="#锐速" class="headerlink" title="锐速"></a>锐速</h3><h2 id="双边加速"><a href="#双边加速" class="headerlink" title="双边加速"></a>双边加速</h2><h3 id="KCP"><a href="#KCP" class="headerlink" title="KCP"></a>KCP</h3><h1 id="测速"><a href="#测速" class="headerlink" title="测速"></a>测速</h1><h1 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h1><blockquote>
+<p><a href="https://www.91yun.org/zh/archives/157" target="_blank" rel="external">https://www.91yun.org/zh/archives/157</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VPS/" rel="tag"># VPS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/18/UpImageMacApp-U图床-markdown写作工具推荐/" rel="next" title="UpImageMacApp(U图床)-markdown写作工具推荐">
+                <i class="fa fa-chevron-left"></i> UpImageMacApp(U图床)-markdown写作工具推荐
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/16/Xcode-Build-Configration多版本配置/" rel="prev" title="Xcode-Build-Configration多版本配置">
+                Xcode-Build-Configration多版本配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="tanpengsccd" />
+          <p class="site-author-name" itemprop="name">tanpengsccd</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单配置环境（方便后续操作，可以不做）"><span class="nav-number">1.</span> <span class="nav-text">简单配置环境（方便后续操作，可以不做）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh安全设置"><span class="nav-number">2.</span> <span class="nav-text">ssh安全设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#端口安全设置"><span class="nav-number">3.</span> <span class="nav-text">端口安全设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iptables配置"><span class="nav-number">3.1.</span> <span class="nav-text">iptables配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防扫描（fail2ban）"><span class="nav-number">3.2.</span> <span class="nav-text">防扫描（fail2ban）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置SS-R-服务器端"><span class="nav-number">4.</span> <span class="nav-text">配置SS(R)服务器端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加速"><span class="nav-number">5.</span> <span class="nav-text">加速</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单边加速"><span class="nav-number">5.1.</span> <span class="nav-text">单边加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锐速"><span class="nav-number">5.1.1.</span> <span class="nav-text">锐速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双边加速"><span class="nav-number">5.2.</span> <span class="nav-text">双边加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KCP"><span class="nav-number">5.2.1.</span> <span class="nav-text">KCP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测速"><span class="nav-number">6.</span> <span class="nav-text">测速</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能测试"><span class="nav-number">7.</span> <span class="nav-text">性能测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tanpengsccd</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'tanpengsccd';
+      var disqus_identifier = '2016/10/09/VPS-CentOS-入手后配置事项-mac客户端/';
+
+      var disqus_title = "VPS(CentOS)入手后配置事项(mac客户端)";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
