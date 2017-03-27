@@ -1,0 +1,943 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="硬件,mac升级," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前言：此教程适用于图中 可“代用”SSD的mac。
+本人就是mc975 第一代15寸 Retina MBP，也是很老的mac了，我这是标配i7 三代+16G内存定制 + 256G SSD（sata通道），就算是现在也可以干掉不少中低端笔记本。现在就是感觉256G 的硬盘空间有点小。就想升级下硬盘还能再战3年。所以google 百度后找到以下几个方案。目前的mac 扩容升级方案：
+
+更换大容量原装S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2012款Retina macbook pro扩容廉价升级方案">
+<meta property="og:url" content="https://tanpengsccd.github.io/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/index.html">
+<meta property="og:site_name" content="tanpengsccd's blog">
+<meta property="og:description" content="前言：此教程适用于图中 可“代用”SSD的mac。
+本人就是mc975 第一代15寸 Retina MBP，也是很老的mac了，我这是标配i7 三代+16G内存定制 + 256G SSD（sata通道），就算是现在也可以干掉不少中低端笔记本。现在就是感觉256G 的硬盘空间有点小。就想升级下硬盘还能再战3年。所以google 百度后找到以下几个方案。目前的mac 扩容升级方案：
+
+更换大容量原装S">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032717746UNADJUSTEDNONRAW_thumb_31.jpg">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032730378diskSpeedTest.png">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032750452DiskSpeedTest2.png">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/20170327149059172531921.jpg?imageView2/0/format/jpg">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032722853UNADJUSTEDNONRAW_thumb_32.jpg">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032755697UNADJUSTEDNONRAW_thumb_33.jpg">
+<meta property="og:image" content="http://oet7vjedr.bkt.clouddn.com/2017032756985UNADJUSTEDNONRAW_thumb_2f.jpg">
+<meta property="og:updated_time" content="2017-03-27T10:08:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2012款Retina macbook pro扩容廉价升级方案">
+<meta name="twitter:description" content="前言：此教程适用于图中 可“代用”SSD的mac。
+本人就是mc975 第一代15寸 Retina MBP，也是很老的mac了，我这是标配i7 三代+16G内存定制 + 256G SSD（sata通道），就算是现在也可以干掉不少中低端笔记本。现在就是感觉256G 的硬盘空间有点小。就想升级下硬盘还能再战3年。所以google 百度后找到以下几个方案。目前的mac 扩容升级方案：
+
+更换大容量原装S">
+<meta name="twitter:image" content="http://oet7vjedr.bkt.clouddn.com/2017032717746UNADJUSTEDNONRAW_thumb_31.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '12534757',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tanpengsccd.github.io/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/"/>
+
+
+
+
+
+  <title> 2012款Retina macbook pro扩容廉价升级方案 | tanpengsccd's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">tanpengsccd's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description"></h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="tanpengsccd">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://oet7vjedr.bkt.clouddn.com/2016121815128head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="tanpengsccd's blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="tanpengsccd's blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                2012款Retina macbook pro扩容廉价升级方案
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T18:00:10+08:00">
+                2017-03-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-27T18:08:25+08:00">
+                2017-03-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/硬件/" itemprop="url" rel="index">
+                    <span itemprop="name">硬件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/" class="leancloud_visitors" data-flag-title="2012款Retina macbook pro扩容廉价升级方案">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>此教程适用于图中 可“代用”SSD的mac。<br><img src="http://oet7vjedr.bkt.clouddn.com/2017032717746UNADJUSTEDNONRAW_thumb_31.jpg" alt="2017032717746UNADJUSTEDNONRAW_thumb_31.jpg"></p>
+<p>本人就是mc975 第一代15寸 Retina MBP，<br>也是很老的mac了，我这是标配i7 三代+16G内存定制 + 256G SSD（sata通道），就算是现在也可以干掉不少中低端笔记本。现在就是感觉256G 的硬盘空间有点小。就想升级下硬盘还能再战3年。所以google 百度后找到以下几个方案。<br>目前的mac 扩容升级方案：</p>
+<ol>
+<li>更换大容量原装SSD，</li>
+<li>创见的兼容SSD ，需要手动开启Trim</li>
+<li>转接板（分NGFF／msata）+ 普通NGFF／msata固态 ，手动开启Trim。只有2012款的mac Retina可以，因为他是走的SATA通道。以后的mac 固态都是走PCIe 通道了，速度当然也提高很多了。以下某宝的图，可代用就是可转接的</li>
+</ol>
+<ol>
+<li>TF卡 + Nifty MiniDrive，读写速度有限</li>
+<li>NAS ，时光胶囊 </li>
+</ol>
+<h2 id="个人认为方案3是性价比最高的"><a href="#个人认为方案3是性价比最高的" class="headerlink" title="个人认为方案3是性价比最高的"></a>个人认为方案3是性价比最高的</h2><ol>
+<li>1.2.3其实都是更换SSD，当然难度相差不大，读写速度也和原来相差不大（速度受限于SSD本身和SATA接口速度，与转接板无关），当然也是动手比较多的。</li>
+<li>4 是最简单的快捷的，但是速度受限于TF卡速度。</li>
+<li><ol>
+<li>使用NAS，时光胶囊等实现云扩容。这个看个人了，其实成本也可高可低，你可以自己组装黑群晖，也可以买白群晖或者时光胶囊，这当然成本不低，当然也可以自己搞一个支持openwrt的路由+移动硬盘。这个方案使用就有地区限制或者速度限制。<br>我把原装256G 固态卖了700，硬盘盒已经有，SSD送转接板（转SATA）<br><strong>所以一共花费50多完成了256G 升级 512G</strong><h1 id="最后成果"><a href="#最后成果" class="headerlink" title="最后成果"></a>最后成果</h1>我是MC975 第一代15寸 rMBP。<br>原来原装的SSD 256G<br><img src="http://oet7vjedr.bkt.clouddn.com/2017032730378diskSpeedTest.png" alt="2017032730378diskSpeedTest.png"><br>更换为转接板+普通NGFF 512G SSD，几乎SATA 3 6Gb／s速度极限了。<br><img src="http://oet7vjedr.bkt.clouddn.com/2017032750452DiskSpeedTest2.png" alt="2017032750452DiskSpeedTest2.png"><br><img src="http://oet7vjedr.bkt.clouddn.com/20170327149059172531921.jpg?imageView2/0/format/jpg" alt="20170327149059172531921.jpg"></li>
+</ol>
+</li>
+</ol>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ol>
+<li>转接板（NGFF转SATA）+ 硬盘盒（SATA转USB）</li>
+<li>转接板（NGFF转成 mac专用固态接口）</li>
+<li>SSD，NGFF 。注意NGFF不要选择2280长度和NVme固态。NGFF固态金手指一般为双开口</li>
+<li>拆机工具P5（苹果专用） 和 T5 ，十字<br>PS: 也可以使用msata 的固态，当然转接板要对应<br>花费<br><img src="http://oet7vjedr.bkt.clouddn.com/2017032722853UNADJUSTEDNONRAW_thumb_32.jpg" alt="2017032722853UNADJUSTEDNONRAW_thumb_32.jpg"></li>
+</ol>
+<p><img src="http://oet7vjedr.bkt.clouddn.com/2017032755697UNADJUSTEDNONRAW_thumb_33.jpg" alt="2017032755697UNADJUSTEDNONRAW_thumb_33.jpg"></p>
+<h1 id="拆机安装"><a href="#拆机安装" class="headerlink" title="拆机安装"></a>拆机安装</h1><p>进入Recovery模式系统 直接把系统盘恢复到新SSD里（需要NGFF转SATA再转USB）。没有硬盘，mac没法进入任一系统，包括恢复模式系统。<br>然后拆机。⚠️：拆固态 先把电池排线拆下。<br>拆机过程见 <a href="https://zh.ifixit.com/Device/Mac_Laptop" target="_blank" rel="external">https://zh.ifixit.com/Device/Mac_Laptop</a><br>安装成果<br><img src="http://oet7vjedr.bkt.clouddn.com/2017032756985UNADJUSTEDNONRAW_thumb_2f.jpg" alt="2017032756985UNADJUSTEDNONRAW_thumb_2f.jpg"><br>装上直接可以开机。</p>
+<h1 id="开启trim"><a href="#开启trim" class="headerlink" title="开启trim"></a>开启trim</h1><ol>
+<li>可以 安装 trim enable </li>
+<li>也可以直接 终端<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo trimforce enable</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/硬件/" rel="tag"># 硬件</a>
+          
+            <a href="/tags/mac升级/" rel="tag"># mac升级</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/02/synolygy-dsm-安装aria2-c-简单教程/" rel="next" title="synolygy dsm 安装aria2(c)简单教程">
+                <i class="fa fa-chevron-left"></i> synolygy dsm 安装aria2(c)简单教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/28/个人简历/" rel="prev" title="个人简历">
+                个人简历 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/"
+           data-title="2012款Retina macbook pro扩容廉价升级方案" data-url="https://tanpengsccd.github.io/2017/03/27/2012款Retina-macbook-pro扩容廉价升级方案/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oet7vjedr.bkt.clouddn.com/2016121815128head.jpg"
+               alt="tanpengsccd" />
+          <p class="site-author-name" itemprop="name">tanpengsccd</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tanpengsccd" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://git.oschina.net/tanpengsccd" target="_blank" title="Git@OSC">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Git@OSC
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/ca0f08449f2c" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/tanpengsccd" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人认为方案3是性价比最高的"><span class="nav-number">1.1.</span> <span class="nav-text">个人认为方案3是性价比最高的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后成果"><span class="nav-number">2.</span> <span class="nav-text">最后成果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备"><span class="nav-number">3.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拆机安装"><span class="nav-number">4.</span> <span class="nav-text">拆机安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开启trim"><span class="nav-number">5.</span> <span class="nav-text">开启trim</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tanpengsccd</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tanpengsccdblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("mJL5tPNUUzfehnBQ3njGhTkw-gzGzoHsz", "Eh4WQkFppQhi66Cg9lsyRhyP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

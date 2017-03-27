@@ -248,7 +248,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2016/10/16/Xcode-Build-Configration多版本配置/">
+  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2016/10/17/CAC-VPS那些坑/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="tanpengsccd">
@@ -273,8 +273,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/16/Xcode-Build-Configration多版本配置/" itemprop="url">
-                  Xcode-Build-Configration多版本配置
+                <a class="post-title-link" href="/2016/10/17/CAC-VPS那些坑/" itemprop="url">
+                  CVC-VPS那些坑
                 </a>
               
             
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-16T17:37:17+08:00">
-                2016-10-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-17T10:50:15+08:00">
+                2016-10-17
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/VPS总结笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">VPS总结笔记</span>
                   </a>
                 </span>
 
@@ -343,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/10/16/Xcode-Build-Configration多版本配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/Xcode-Build-Configration多版本配置/" itemprop="commentCount"></span>
+                <a href="/2016/10/17/CAC-VPS那些坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/17/CAC-VPS那些坑/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -354,7 +354,7 @@
 
           
           
-             <span id="/2016/10/16/Xcode-Build-Configration多版本配置/" class="leancloud_visitors" data-flag-title="Xcode-Build-Configration多版本配置">
+             <span id="/2016/10/17/CAC-VPS那些坑/" class="leancloud_visitors" data-flag-title="CVC-VPS那些坑">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,36 +383,23 @@
       
         
           
-            <p>写在前面：<br>多套 build configration 可以方便我们编译成不同的版本，其中可以 不同bundle id 不同 Displa namey，并以此 分化功能上的差异。<br>常见用处：</p>
-<ol>
-<li>调试版 可能会需要加入 Reveal SDK, 方便调试视图 调试版可能需要需要使用测试的API接口,而正式版是不能含有此SDK，且使用正式版的API。</li>
-<li>Lite，pro 版本 功能上的分化。大部分核心功能相同但仍有部分不同</li>
+            <h1 id="购买后官方不发送panel面板的随机登陆密码"><a href="#购买后官方不发送panel面板的随机登陆密码" class="headerlink" title="购买后官方不发送panel面板的随机登陆密码"></a>购买后官方不发送panel面板的随机登陆密码</h1><ol>
+<li><a href="https://panel.cloudatcost.com/" target="_blank" rel="external">https://panel.cloudatcost.com/</a> 自行Reset会发送密码  </li>
 </ol>
-<p>此处以我的项目为例。需要新建一个内部测试版（Alpha）和一个企业版（Enterprise），相对于正式版（release），内部测试版需要可以使用测试API地址和新增使用自动更新功能，企业版需要新增使用自动更新功能。<br>|版本|测试版地址|更新提示|<br>|—|:—:|:—:|<br>|Release|X|X|<br>|Debug|O|X|<br>|Enterprise|X|O|</p>
-<h1 id="project-配置"><a href="#project-配置" class="headerlink" title="project 配置"></a>project 配置</h1><ol>
-<li><p>新增build configration<br><img src="http://oet7vjedr.bkt.clouddn.com/2016121614818742423966.jpg?imageView2/0/format/jpg" alt="2016121614818742423966.jpg"><br>这样便新增一套配置文件 例如我自己命名为“Alpha” 和 “Enterprise”。</p>
-</li>
-<li><p>新建自定义设置项<br><img src="http://oet7vjedr.bkt.clouddn.com/20161216148187614526138.jpg?imageView2/0/format/jpg" alt="20161216148187614526138.jpg"><br>比如第一个设置项我对应不同版本设置了 不同的 bundle id （这样就可以几个版本的app 同时共存），并把设置项命名为“BUNDLE_IDENTIFIER” 。</p>
-</li>
-<li><p>设置 bundle ID<br>如下填入 $(BUNDLE_IDENTIFIER) ，即 $(设置项名称)。即可完成 Build Configration 中 bundle id 的差异化<br><img src="http://oet7vjedr.bkt.clouddn.com/20161216148187675240155.jpg?imageView2/0/format/jpg" alt="20161216148187675240155.jpg"><br>其它配置项的差异化 配置方法雷同：如Display name，info plist  path，app icon。</p>
-</li>
+<h1 id="管理面板不能登录或者忘记密码"><a href="#管理面板不能登录或者忘记密码" class="headerlink" title="管理面板不能登录或者忘记密码"></a>管理面板不能登录或者忘记密码</h1><ol>
+<li><a href="https://panel.cloudatcost.com/" target="_blank" rel="external">https://panel.cloudatcost.com/</a> 自行Reset会发送密码 </li>
 </ol>
-<h1 id="cocoapods-配置"><a href="#cocoapods-配置" class="headerlink" title="cocoapods 配置"></a>cocoapods 配置</h1><p>其实配置很简单，只是一部分童鞋不知道语法<br><code>pod 三方库名称 , :configurations =&gt; [&#39; build名称&#39;]</code></p>
-<p><img src="http://oet7vjedr.bkt.clouddn.com/20161216148187879197159.jpg?imageView2/0/format/jpg" alt="20161216148187879197159.jpg"></p>
-<h1 id="代码控制"><a href="#代码控制" class="headerlink" title="代码控制"></a>代码控制</h1><ol>
-<li>配置cocoapods前需要先配置 project的预处理宏<br><img src="http://oet7vjedr.bkt.clouddn.com/20161216148187920028262.jpg?imageView2/0/format/jpg" alt="20161216148187920028262.jpg"></li>
-<li><p>代码<br>宏编译知识看<a href="http://www.cnblogs.com/rusty/archive/2011/03/27/1996806.html" target="_blank" rel="external">这里</a>  </p>
-<ol>
-<li><p>友盟统计 区别设置渠道</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#if defined(AlPHA)</div><div class="line">    UMConfigInstance.channelId = @&quot;ALPHA&quot;;</div><div class="line">#elif defined(ENTERPRISE)</div><div class="line"> UMConfigInstance.channelId = @&quot;ENTERPRISE&quot;;</div><div class="line">#endif</div></pre></td></tr></table></figure>
-</li>
-<li><p>内部测试版 和 企业版 使用 蒲公英SDK 的更新服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#if defined(ALPHA) ||  defined(ENTERPRISE)</div><div class="line"></div><div class="line">    [[PgyManager sharedPgyManager]; startManagerWithAppId:PGY_APP_ID];</div><div class="line">    [[PgyManager sharedPgyManager] setEnableFeedback:NO];</div><div class="line">    [[PgyManager sharedPgyManager] setShakingThreshold:3];</div><div class="line">    [[PgyManager sharedPgyManager] setThemeColor:COLOUR_RED];</div><div class="line">    [[PgyUpdateManager sharedPgyManager]; startManagerWithAppId:PGY_APP_ID];</div><div class="line">    [[PgyUpdateManager sharedPgyManager] checkUpdate];</div><div class="line">   </div><div class="line">#endif</div></pre></td></tr></table></figure>
-</li>
+<h1 id="can‘t-get-ip-…………"><a href="#can‘t-get-ip-…………" class="headerlink" title="can‘t get ip …………."></a>can‘t get ip ………….</h1><ol>
+<li>故名思议没有IP给你了，等半天再创建吧。  </li>
+</ol>
+<h1 id="创建VPS后-ping不通且SSH无法连接"><a href="#创建VPS后-ping不通且SSH无法连接" class="headerlink" title="创建VPS后 ping不通且SSH无法连接"></a>创建VPS后 ping不通且SSH无法连接</h1><ol>
+<li>首先在控制面板 Modify下点击Netwoking ，这样测试2次，如果2次全为fail看2.1，如果第二次为succes则尝试再次ping 和ssh连接,若还是无法连接看2.2  </li>
+<li><ol>
+<li>可能是CVC抽风 删除后再新建，如果3次后依然如此，就只能等半天到一天再试了 </li>
+<li>点击面板的Console 如果能链接，就说明是你自己的设置防火墙之类的软件有问题。</li>
 </ol>
 </li>
 </ol>
-<h1 id="一些效果"><a href="#一些效果" class="headerlink" title="一些效果"></a>一些效果</h1><p><img src="http://oet7vjedr.bkt.clouddn.com/20161216148188009825013.jpg?imageView2/0/format/jpg" alt="20161216148188009825013.jpg"></p>
 
           
         
@@ -446,7 +433,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -489,7 +476,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -498,7 +485,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -507,7 +494,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

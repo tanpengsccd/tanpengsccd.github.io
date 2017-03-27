@@ -248,7 +248,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2016/10/17/CAC-VPS那些坑/">
+  <link itemprop="mainEntityOfPage" href="https://tanpengsccd.github.io/2016/12/02/synolygy-dsm-安装aria2-c-简单教程/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="tanpengsccd">
@@ -273,8 +273,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/17/CAC-VPS那些坑/" itemprop="url">
-                  CVC-VPS那些坑
+                <a class="post-title-link" href="/2016/12/02/synolygy-dsm-安装aria2-c-简单教程/" itemprop="url">
+                  synolygy dsm 安装aria2(c)简单教程
                 </a>
               
             
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-17T10:50:15+08:00">
-                2016-10-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-02T15:43:32+08:00">
+                2016-12-02
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/VPS总结笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">VPS总结笔记</span>
+                  <a href="/categories/nas/" itemprop="url" rel="index">
+                    <span itemprop="name">nas</span>
                   </a>
                 </span>
 
@@ -343,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/10/17/CAC-VPS那些坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/17/CAC-VPS那些坑/" itemprop="commentCount"></span>
+                <a href="/2016/12/02/synolygy-dsm-安装aria2-c-简单教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/02/synolygy-dsm-安装aria2-c-简单教程/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -354,7 +354,7 @@
 
           
           
-             <span id="/2016/10/17/CAC-VPS那些坑/" class="leancloud_visitors" data-flag-title="CVC-VPS那些坑">
+             <span id="/2016/12/02/synolygy-dsm-安装aria2-c-简单教程/" class="leancloud_visitors" data-flag-title="synolygy dsm 安装aria2(c)简单教程">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,22 +383,62 @@
       
         
           
-            <h1 id="购买后官方不发送panel面板的随机登陆密码"><a href="#购买后官方不发送panel面板的随机登陆密码" class="headerlink" title="购买后官方不发送panel面板的随机登陆密码"></a>购买后官方不发送panel面板的随机登陆密码</h1><ol>
-<li><a href="https://panel.cloudatcost.com/" target="_blank" rel="external">https://panel.cloudatcost.com/</a> 自行Reset会发送密码  </li>
-</ol>
-<h1 id="管理面板不能登录或者忘记密码"><a href="#管理面板不能登录或者忘记密码" class="headerlink" title="管理面板不能登录或者忘记密码"></a>管理面板不能登录或者忘记密码</h1><ol>
-<li><a href="https://panel.cloudatcost.com/" target="_blank" rel="external">https://panel.cloudatcost.com/</a> 自行Reset会发送密码 </li>
-</ol>
-<h1 id="can‘t-get-ip-…………"><a href="#can‘t-get-ip-…………" class="headerlink" title="can‘t get ip …………."></a>can‘t get ip ………….</h1><ol>
-<li>故名思议没有IP给你了，等半天再创建吧。  </li>
-</ol>
-<h1 id="创建VPS后-ping不通且SSH无法连接"><a href="#创建VPS后-ping不通且SSH无法连接" class="headerlink" title="创建VPS后 ping不通且SSH无法连接"></a>创建VPS后 ping不通且SSH无法连接</h1><ol>
-<li>首先在控制面板 Modify下点击Netwoking ，这样测试2次，如果2次全为fail看2.1，如果第二次为succes则尝试再次ping 和ssh连接,若还是无法连接看2.2  </li>
-<li><ol>
-<li>可能是CVC抽风 删除后再新建，如果3次后依然如此，就只能等半天到一天再试了 </li>
-<li>点击面板的Console 如果能链接，就说明是你自己的设置防火墙之类的软件有问题。</li>
+            <h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><ol>
+<li>DSM 系统可以重启进入系统</li>
+<li>ssh 可以通<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
+<li>nas 打开ssh<br><img src="http://oet7vjedr.bkt.clouddn.com/20161128148030246747542.jpg?imageView2/0/format/jpg" alt="20161128148030246747542.jpg"><br>让nas可以ssh 联通<br><code>ssh -p(端口，默认22) -lroot ip地址</code><br><img src="http://oet7vjedr.bkt.clouddn.com/20161128148030238819327.jpg?imageView2/0/format/jpg" alt="20161128148030238819327.jpg"></li>
 </ol>
 </li>
+</ol>
+<ol>
+<li>新建下载文件夹<br> <img src="http://oet7vjedr.bkt.clouddn.com/20161202148064735642784.jpg?imageView2/0/format/jpg" alt="20161202148064735642784.jpg"><br> 设置权限<br> <img src="http://oet7vjedr.bkt.clouddn.com/20161202148064749830927.jpg?imageView2/0/format/jpg" alt="20161202148064749830927.jpg"><br> ok。<br> 命令行创建的文件夹 在dsm操作系统是不能直接看到的，所以老老实实这样创建吧  </li>
+<li>安装Entware 以支持安装opkg 软件<br> 具体见 <a href="https://github.com/Entware-ng/Entware-ng" target="_blank" rel="external">https://github.com/Entware-ng/Entware-ng</a><br> <code>uname -a</code>  可查看自己linux 系统版本,根据系统版本安装对应版本Entware</li>
+<li>安装 git-http 和 aria2  <pre><code>opkg install git-http
+opkg install aria2
+</code></pre></li>
+<li><p>调试与配置</p>
+<ol>
+<li><p>配置aira2.conf 配置文件  </p>
+<ol>
+<li>具体看移步 <a href="http://aria2c.com/usage.html" target="_blank" rel="external">http://aria2c.com/usage.html</a> </li>
+<li><p>或直接用我自己的配置文件</p>
+<ol>
+<li>新建个aria2.session 会话文件<br><code>touch  /volume1/downloads/aria2.session</code></li>
+<li><p>下载 我的aria2.conf  </p>
+<p><code>wget -O /volume1/downloads/aria2.conf  https://raw.githubusercontent.com/tanpengsccd/aria2conf/master/dsm/aria2.conf</code></p>
+<p>这个文件不能删掉哦！/volume1/downloads/aria2.conf 不然启动会失败</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>调试<br> <code>/opt/bin/aria2c --enable-rpc --rpc-listen-all=true</code> </p>
+<p> 查看log<br> 登陆  http:/aria2c.com/ 在这个在线管理界面自行配置，添加下载任务，看log信息自己调试<br> 先检查内网ip是否ok，再检查外网ip。</p>
+</li>
+<li><p>配置aria2启动项<br>  aria2c 安装后会自启（偶不知道自启的配置文件在哪…,没法改），要先关闭再重新以配置文件启动<br> vi /etc/rc.local<br> 添加  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">killall aria2c  </div><div class="line">/opt/bin/aria2c --conf-path=/volume1/downloads/aria2.conf -D</div></pre></td></tr></table></figure>
+</li>
+<li><p>测试 aria2c 正常否 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">netstat -apn|grep &lt;端口号&gt;   </div><div class="line">killall 进程</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>[选作] 安装本地nas的aria2 web客户端<br> 首先需要打开nas的 web服务器，5.2的DSM系统可以直接打开，6.0需要自己再套件商城下载<br> 外网访问可能需要其他端口,因为80端口一般都是被电信封了的<br> <img src="http://oet7vjedr.bkt.clouddn.com/20161202148064674515880.jpg?imageView2/0/format/jpg" alt="20161202148064674515880.jpg"></p>
+<p> <code>cd /volume1/web</code><br> 以下二选一</p>
+<ol>
+<li>webui-aria2 界面丰富<br><code>git clone https://github.com/ziahamza/webui-aria2.git</code></li>
+<li><p>YAAW 界面简单，占用小<br><code>git clone https://github.com/binux/yaaw.git</code>  </p>
+<p>访问地址：<br>ip:port/webui-aria2 或者 ip:port/yaaw<br>第一次都需要配置一下</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>以下比较过时，仅做参考</p>
+<ol>
+<li>安装bootstrap 以 支持安装ipkg包  教程<a href="http://www.vspecialist.co.uk/2014/09/how-to-install-ipkg-on-a-synology-nas/" target="_blank" rel="external">http://www.vspecialist.co.uk/2014/09/how-to-install-ipkg-on-a-synology-nas/</a>  </li>
+<li>DSM6.0 安装aria2的教程 <a href="https://www.chiphell.com/thread-1558683-1-1.html" target="_blank" rel="external">https://www.chiphell.com/thread-1558683-1-1.html</a>  </li>
+<li>DSM5.0 安装aria2的教程 <a href="http://post.smzdm.com/p/49402/" target="_blank" rel="external">http://post.smzdm.com/p/49402/</a></li>
 </ol>
 
           
@@ -433,7 +473,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -476,7 +516,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -485,7 +525,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -494,7 +534,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
