@@ -136,8 +136,8 @@ can‘t get ip ………….
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '12534757',
-      author: 'Author'
+      userId: 'undefined',
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -373,7 +373,7 @@ can‘t get ip ………….
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/17/CAC-VPS那些坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/17/CAC-VPS那些坑/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/17/CAC-VPS那些坑/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -499,8 +499,11 @@ can‘t get ip ………….
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/17/CAC-VPS那些坑/"
-           data-title="CVC-VPS那些坑" data-url="https://tanpengsccd.github.io/2016/10/17/CAC-VPS那些坑/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -764,36 +767,38 @@ can‘t get ip ………….
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"tanpengsccdblog"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'blog-tanpengcd-cn';
+      var disqus_identifier = '2016/10/17/CAC-VPS那些坑/';
+
+      var disqus_title = "CVC-VPS那些坑";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
       
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
   
-
-
-
 
 
 
